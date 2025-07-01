@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, NavLink } from "react-router";
 import { FaHome } from "react-icons/fa";
 import { IoBookSharp } from "react-icons/io5";
 import { MdOutlineLibraryBooks } from "react-icons/md";
+import { IoIosContact } from "react-icons/io";
+import NavLink from "./NavLink";
 
 const Navigation = [
     {
@@ -16,21 +17,21 @@ const Navigation = [
         id: 2,
         name: "About",
         path: "/about",
-        icon: <FaHome />
+        icon: <MdOutlineLibraryBooks />
     },
 
     {
         id: 3,
         name: "Books",
         path: "/books",
-        icon: <MdOutlineLibraryBooks />
+        icon: <IoBookSharp />
     },
 
     {
         id: 4,
         name: "Contact",
         path: "/contact",
-        icon: <MdOutlineLibraryBooks />
+        icon: <IoIosContact />
     }
 ]
 
@@ -39,12 +40,9 @@ const Navbar = () => {
         <nav className="list-none flex flex-col gap-3">
             {
                 Navigation.map(navItem => (
-                    <NavLink key={navItem.id} name={navItem.name} path={navItem.path} icon={navItem.icon}/>
+                    <NavLink key={navItem.id} name={navItem.name} path={navItem.path} icon={navItem.icon} />
                 ))
             }
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/books">Books</Link></li>
         </nav>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
+import SidebarUserDetails from "./SidebarUserDetails";
 
 const Sidebar = () => {
     return(
@@ -14,7 +15,7 @@ const Sidebar = () => {
                 </div>
                 
                
-                <p>Bottom Section</p>
+                <SidebarUserDetails />
             </div>
         </div>
     )
