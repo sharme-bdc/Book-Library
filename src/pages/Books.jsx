@@ -1,17 +1,10 @@
 import React from "react";
-import { CiFilter } from "react-icons/ci";
-import SearchBar from "../components/SearchBar";
+import DataTable from "../components/DataTable";
 
 const Books = () => {
     return(
-        <div>
-            <div className="flex justify-between items-center">
-                <div className="flex gap-5 items-center">
-                    <CiFilter />
-                    <SearchBar rounded={true}/>
-                </div>
-                <h1>Right</h1>
-            </div>
+        <div className="px-5 py-3">
+            <DataTable />
         </div>
     )
 }

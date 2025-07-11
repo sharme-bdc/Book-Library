@@ -10,7 +10,7 @@ const Sidebar = () => {
                 <div>
                     <h1 className="mb-5 font-bold uppercase">BookSotre Dashboard</h1>
                     
-                    <SearchBar />
+                    <SearchBar rounded={true}/>
                     <Navbar />
                 </div>
                 
