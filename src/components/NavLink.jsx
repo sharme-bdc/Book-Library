@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { DynamicIcon } from 'lucide-react/dynamic';
 
 const NavLink = ({
     name,
@@ -9,7 +10,7 @@ const NavLink = ({
 }) => {
     return(
         <li className="flex items-center gap-4">
-            {icon}
+            <DynamicIcon name={icon} size={30} />
             <Link to={path} className={color}>{name}</Link>
         </li>
     )
