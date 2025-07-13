@@ -14,10 +14,16 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<FontEndLayout />}>
           <Route index element={<Home />}></Route>
+        </Route>
+      </Routes>
+
+      <Routes>
+        <Route path="/admin" element={<Layout />}>
+          
           <Route path="/about" element={<About />}></Route>
-          <Route path="/Books" element={<Books />}></Route>
+          <Route path="books" element={<Books />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path='/settings' element={<Settings />}></Route>
           <Route path='/logout' element={<LogOut />}></Route>
